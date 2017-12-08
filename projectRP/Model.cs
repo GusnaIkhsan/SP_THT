@@ -174,7 +174,7 @@ namespace projectRP
         public void isidatapenderita(DataGridView dt)
         {
             koneksi.Open();
-            queri = "select * from penderita";
+            queri = "SELECT * from penderita join penyakit on penderita.kode_penyakit = penyakit.kode_penyakit";
             command = new MySqlCommand(queri, koneksi);
             reader = command.ExecuteReader();
             DataTable data = new DataTable();
@@ -193,7 +193,7 @@ namespace projectRP
                 tmp[2] = reader[4];
                 tmp[3] = reader[5];
                 tmp[4] = reader[6];
-                tmp[5] = reader[7];
+                tmp[5] = reader[9];
                 data.Rows.Add(tmp);
             }
             dt.DataSource = data;
@@ -202,8 +202,9 @@ namespace projectRP
         public void caripenderita(DataGridView dt, string cari)
         {
             koneksi.Open();
-            queri = "select * from penderita where nama = '" + cari + "' or jenis_kelamin = '" + cari +
-                "' or usia = '" + cari + "'or alamat = '" + cari + "'or pekerjaan = '" + cari + "'";
+            queri = "select * from penderita join penyakit on penderita.kode_penyakit = penyakit.kode_penyakit " +
+                "where nama = '" + cari + "' or jenis_kelamin = '" + cari +"' or usia = '" + cari + 
+                "'or alamat = '" + cari + "'or pekerjaan = '" + cari + "'";
             command = new MySqlCommand(queri, koneksi);
             reader = command.ExecuteReader();
             DataTable data = new DataTable();
@@ -222,7 +223,7 @@ namespace projectRP
                 tmp[2] = reader[4];
                 tmp[3] = reader[5];
                 tmp[4] = reader[6];
-                tmp[5] = reader[7];
+                tmp[5] = reader[9];
                 data.Rows.Add(tmp);
             }
             dt.DataSource = data;

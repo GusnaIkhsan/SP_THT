@@ -72,8 +72,7 @@ namespace projectRP
             double hasil = 0;
             Boolean tanda,tanda2;
             penyakit = "xxx";
-            //if (temp3==0)
-            //{            
+           
                 for (int i = 0; i < kelas.Count; i++)//kelas
                 {
                     double temp2 = nilaiprior(kelas[i].ToString());
@@ -108,7 +107,7 @@ namespace projectRP
                         penyakit = kelas[i];
                     }
                 }
-            //}
+        
             if (temp3==0)
             {
                 for (int l = 0; l < kelas.Count; l++)//kelas
@@ -213,12 +212,6 @@ namespace projectRP
             Model m = new Model();
             m.caripenderita(dt, cari);           
         }
-        //public void reset_value()
-        //{
-        //    for (int i = 0; i < hasilterpilih2.Count; i++)
-        //    {
-        //        hasilterpilih2[i] = " ";
-        //    }
-        //}
+        
     }
 }
