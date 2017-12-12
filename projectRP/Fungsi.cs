@@ -26,10 +26,6 @@ namespace projectRP
             m.pgejala(flp);
             m.penyakit();
             //hasilterpilih2.Add("G2");
-            //hasilterpilih2.Add("G4");
-            //hasilterpilih2.Add("G5");
-            //hasilterpilih2.Add("G16");
-            //hasilterpilih2.Add("G19");
         }
         public void dataG(DataGridView dtg)
         {

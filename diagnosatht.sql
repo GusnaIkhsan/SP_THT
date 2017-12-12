@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2017 at 03:32 PM
+-- Generation Time: Dec 12, 2017 at 04:20 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -125,6 +125,18 @@ CREATE TABLE `penderita` (
   `pekerjaan` varchar(100) NOT NULL,
   `kode_penyakit` varchar(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `penderita`
+--
+
+INSERT INTO `penderita` (`kode_penderita`, `nama`, `tgl_lahir`, `jenis_kelamin`, `usia`, `alamat`, `pekerjaan`, `kode_penyakit`) VALUES
+('PS001', 'Jono', '1998-04-12', 'Laki-laki', 20, 'Malang', 'Mahasiswa', 'P4'),
+('PS002', 'Darso', '1990-01-12', 'Perempuan', 40, 'Tulungagung', 'Buruh', 'P4'),
+('PS003', 'Dodit', '1997-03-11', 'Laki-laki', 30, 'Malang', 'Guru', 'P4'),
+('PS004', 'Caca', '1989-12-09', 'Perempuan', 30, 'Malang', 'wiraswasta', 'P2'),
+('PS005', 'Loli', '1999-05-08', 'Perempuan', 19, 'Kediri', 'Mahasiswa', 'P4'),
+('PS006', 'Doni', '2017-12-08', 'Laki-laki', 10, 'Malang', 'siswa', 'P4');
 
 --
 -- Triggers `penderita`
