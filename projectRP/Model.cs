@@ -166,8 +166,11 @@ namespace projectRP
         public void hasilcheckterpilih(object sender, EventArgs e)
         {
             CheckBox checki = (CheckBox)sender;
-            if (checki.Checked){
+            if (checki.Checked)
+            {
                 Fungsi.hasilterpilih2.Add(checki.Name);
+            } else {
+                Fungsi.hasilterpilih2.Remove(checki.Name);
             }
             
         }
